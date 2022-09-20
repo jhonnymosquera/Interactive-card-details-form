@@ -1,0 +1,172 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.webp .contenedor {
+	background-image: url('../img/bg-main-mobile.webp');
+
+	@include m.desktop {
+		background-image: url('../img/bg-main-desktop.webp');
+	}
+}
+
+.no-webp .contenedor {
+	background-image: url('../img/bg-main-mobile.jpg');
+
+	@include m.desktop {
+		background-image: url('../img/bg-main-desktop.jpg');
+	}
+}
+
+.pr {
+	position: relative;
+}
+
+.contenedor {
+	width: 100%;
+	padding: 20rem;
+	background-repeat: no-repeat;
+
+	@include m.desktop {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		width: 70%;
+	}
+}
+
+.cards {
+	top: 0;
+	left: 0;
+	margin-top: 10rem;
+	width: 100%;
+}
+
+.contenedor-card {
+	width: 100%;
+}
+
+.card-p {
+	width: 290rem;
+	border-radius: 10rem;
+
+	@include m.desktop {
+		width: 450rem;
+	}
+}
+
+.card-back {
+	position: absolute;
+	right: 20rem;
+
+	-webkit-box-shadow: 29px 29px 101px -50px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 29px 29px 101px -50px rgba(0, 0, 0, 0.75);
+	box-shadow: 29px 29px 101px -50px rgba(0, 0, 0, 0.75);
+
+	@include m.desktop {
+		left: 260rem;
+		top: 400rem;
+	}
+
+	span {
+		position: absolute;
+		top: 73rem;
+		right: 35rem;
+		color: v.$blanco;
+		font-size: 10rem;
+		letter-spacing: 1rem;
+
+		@include m.desktop {
+			top: 112rem;
+			right: 60rem;
+			font-size: 18rem;
+		}
+	}
+}
+
+.card-front {
+	position: absolute;
+	top: 120rem;
+	left: 20rem;
+
+	-webkit-box-shadow: 29px 29px 101px -50px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 29px 29px 101px -50px rgba(0, 0, 0, 0.75);
+	box-shadow: 29px 29px 101px -50px rgba(0, 0, 0, 0.75);
+
+	@include m.desktop {
+		left: 150rem;
+	}
+}
+
+.card-fornt-info {
+	position: absolute;
+	top: 0rem;
+	padding: 20rem;
+	width: 100%;
+
+	.circulos {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 55rem;
+		margin-bottom: 30rem;
+
+		@include m.desktop {
+			width: 85rem;
+			margin-bottom: 80rem;
+		}
+
+		.c1 {
+			background-color: v.$blanco;
+			width: 30rem;
+			height: 30rem;
+			border-radius: 50%;
+
+			@include m.desktop {
+				width: 50rem;
+				height: 50rem;
+			}
+		}
+
+		.c2 {
+			width: 15rem;
+			height: 15rem;
+			border: 1rem solid v.$violeta-gc;
+			border-radius: 50%;
+
+			@include m.desktop {
+				width: 20rem;
+				height: 20rem;
+			}
+		}
+	}
+
+	.card-number {
+		display: flex;
+		margin-bottom: 20rem;
+
+		p {
+			color: v.$blanco;
+			letter-spacing: 1rem;
+
+			@include m.desktop {
+				font-size: 32rem;
+			}
+		}
+	}
+
+	.card-datos {
+		display: flex;
+		justify-content: space-between;
+
+		p {
+			text-transform: uppercase;
+			font-size: 10rem;
+			color: v.$violeta-gc;
+			letter-spacing: 1rem;
+
+			@include m.desktop {
+				font-size: 16rem;
+			}
+		}
+	}
+}
